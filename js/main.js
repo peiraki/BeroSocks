@@ -60,7 +60,7 @@ if(pageSelectorCount){
             <h3 class="sockName">წინდა N${i} </h3>
             <img class="sockImage" src="imgs/socks/${i}.jpg" alt="cartoon socks">
             <div class="categoriName">
-                    <img class="categoryIcon" src="imgs/icons/sock.png" alt="">
+                    <img class="categoryIcon" src="blob/main/imgs/icons/sock.png" alt="">
                     <span>წინდა</span>
             </div>  
             <p class="sockDesc"><span class="redText">აქცია - </span> შეიძინეთ 3 ნებისმიერი წინდა 2-ის ფასად 
@@ -120,7 +120,7 @@ function selectPage(number){
             socksBlock.innerHTML += `
             <div class="hotProduct">
                 <h3 class="sockName">წინდა N${i} </h3>
-                <img class="sockImage" src="imgs/socks/${i}.jpg" alt="cartoon socks">
+                <img class="sockImage" src="blob/main/imgs/socks/${i}.jpg" alt="cartoon socks">
                 <div class="categoriName">
                         <img class="categoryIcon" src="imgs/icons/sock.png" alt="">
                         <span>წინდა</span>
