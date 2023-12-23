@@ -1,6 +1,7 @@
 @media (max-width: 1350px){
     .hotProducts {
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
     }
 }
 
@@ -16,6 +17,16 @@
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
+    .zoomedImage .zoomedBox  img {
+        max-height: 100vh !important;
+    }
+    .zoomedImage {
+        width: 100% !important;
+        height: 90vh;
+    }
+    .zoomedBox {
+        height: 90vh;
+    }
 }
 @media (max-width: 660px){
     body {
@@ -24,7 +35,6 @@
     }
     .hotProducts {
         grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
         margin: 0 auto;
     }
     .hotProduct {

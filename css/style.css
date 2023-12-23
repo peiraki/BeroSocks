@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: geo09, sans-serif !important;
     transition: .4s;
+    scroll-behavior: smooth
 }
 
 
@@ -39,7 +40,7 @@ a {
 }
 
 ::selection {
-    color: rgb(21, 92, 97);
+    color: rgb(37, 10, 10);
     background-color: #55c4cc;
 }
 
@@ -326,7 +327,10 @@ button[type="submit"]:hover {
     padding: 20px;
   }
   .sockImage {
-    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    object-fit: cover;
   }
   .sockName {
     background-color: #cb0707a8;
@@ -362,6 +366,44 @@ button[type="submit"]:hover {
     /* border-top-right-radius:unset; */
     /* border-top-left-radius:unset; */
 
+  }
+
+  .none {
+    display: none;
+  }
+  .zoomedImage {
+    max-width: 80%;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #24a0a9;
+    z-index: 101010;
+    max-width: max-content;
+  }
+  .zoomedImage .zoomedBox  img {
+    max-width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 2px solid black;
+    object-fit: cover;
+}
+  .zoomedBox {
+    max-width: max-content;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .closeBtn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    padding: 10px 20px;
+    border: 2px solid rgb(0, 0, 0);
   }
   .hotProduct img {
     width: 100%;
@@ -563,3 +605,5 @@ footer {
 .logoBoxFooter ul b {
     color: #5e9397;
 }
+
+

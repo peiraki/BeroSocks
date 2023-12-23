@@ -58,9 +58,9 @@ if(pageSelectorCount){
         socksBlock.innerHTML += `
         <div class="hotProduct">
             <h3 class="sockName">წინდა N${i} </h3>
-            <img class="sockImage" src="imgs/socks/${i}.jpg" alt="cartoon socks">
+            <img class="sockImage" src="imgs/socks/${i}-min.jpg" alt="cartoon socks">
             <div class="categoriName">
-                    <img class="categoryIcon" src="blob/main/imgs/icons/sock.png" alt="">
+                    <img class="categoryIcon" src="imgs/icons/sock.png" alt="">
                     <span>წინდა</span>
             </div>  
             <p class="sockDesc"><span class="redText">აქცია - </span> შეიძინეთ 3 ნებისმიერი წინდა 2-ის ფასად 
@@ -77,6 +77,23 @@ if(pageSelectorCount){
         </div>
         
             `
+    }
+    let allSockImage = document.querySelectorAll('.sockImage');
+    let screenHeight = window.innerHeight;
+    allSockImage.forEach(image => {
+        console.log(window.scrollY)
+        
+        image.addEventListener('click', ()=> {
+            zoomedImage.style.top = window.scrollY + (screenHeight/2) + "px";
+            document.querySelector('.zoomedImage').classList.remove('none')
+            document.querySelector('.zoomedImage img').src = image.src;
+            console.log(image.src)
+        })
+        
+    });
+    function closeZoomedImage() {
+        document.querySelector('.zoomedImage').classList.add('none')
+
     }
 }
 
@@ -95,6 +112,7 @@ function selectPage(number){
     pageSelectorCount = number
     console.log(number)
     
+    window.scrollTo(0,0);
 
     if(pageSelectorCount){
         if(pageSelectorCount === 1 ){
@@ -120,7 +138,7 @@ function selectPage(number){
             socksBlock.innerHTML += `
             <div class="hotProduct">
                 <h3 class="sockName">წინდა N${i} </h3>
-                <img class="sockImage" src="blob/main/imgs/socks/${i}.jpg" alt="cartoon socks">
+                <img class="sockImage" src="imgs/socks/${i}-min.jpg" alt="cartoon socks">
                 <div class="categoriName">
                         <img class="categoryIcon" src="imgs/icons/sock.png" alt="">
                         <span>წინდა</span>
@@ -143,8 +161,26 @@ function selectPage(number){
 
 
     }
+    let allSockImage = document.querySelectorAll('.sockImage');
+    let screenHeight = window.innerHeight;
+    allSockImage.forEach(image => {
+        console.log(window.scrollY)
+        
+        image.addEventListener('click', ()=> {
+            zoomedImage.style.top = window.scrollY + (screenHeight/2) + "px";
+            document.querySelector('.zoomedImage').classList.remove('none')
+            document.querySelector('.zoomedImage img').src = image.src;
+            console.log(image.src)
+        })
+        
+    });
+function closeZoomedImage() {
+    document.querySelector('.zoomedImage').classList.add('none')
 
 }
+
+}
+
 
 
 // let favHeart = document.querySelectorAll('.favHeart');
